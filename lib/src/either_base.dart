@@ -1,4 +1,6 @@
 abstract class Either<L, R> {
+  const Either();
+
   B fold<B>(B Function(L l) ifLeft, B Function(R r) ifRight);
 
   bool isLeft();
@@ -14,7 +16,7 @@ abstract class Either<L, R> {
 class Left<L, R> extends Either<L, R> {
   final L left;
 
-  Left(this.left);
+  const Left(this.left);
 
   @override
   B fold<B>(B Function(L l) ifLeft, B Function(R r) ifRight) => ifLeft(left);
@@ -41,7 +43,7 @@ class Left<L, R> extends Either<L, R> {
 class Right<L, R> extends Either<L, R> {
   final R right;
 
-  Right(this.right);
+  const Right(this.right);
 
   @override
   B fold<B>(B Function(L l) ifLeft, B Function(R r) ifRight) => ifRight(right);
@@ -65,6 +67,10 @@ class Right<L, R> extends Either<L, R> {
   R getRightValue() => right;
 }
 
-class NotRightException implements Exception {}
+class NotRightException implements Exception {
+  const NotRightException();
+}
 
-class NotLeftException implements Exception {}
+class NotLeftException implements Exception {
+  const NotLeftException();
+}
