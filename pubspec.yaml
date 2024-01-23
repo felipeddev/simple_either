@@ -1,7 +1,7 @@
 name: simple_either
 description: A package that provides an Either type.
 version: 1.0.0
-homepage: https://github.com/felipeddev/either
+homepage: https://github.com/felipeddev/simple_either
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
