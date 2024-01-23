@@ -1,13 +1,10 @@
 name: either
-description: A starting point for Dart libraries or applications.
-version: 0.1.0
-repository: https://github.com/felipeddev/either
+description: A package that provides an Either type.
+version: 1.0.0
+homepage: https://github.com/felipeddev/either
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
-
-dependencies:
-  # path: ^1.8.0
 
 dev_dependencies:
   lints: ^2.1.0
