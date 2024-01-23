@@ -1,4 +1,4 @@
-name: either
+name: simple_either
 description: A package that provides an Either type.
 version: 1.0.0
 homepage: https://github.com/felipeddev/either
