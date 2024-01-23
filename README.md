@@ -24,7 +24,7 @@ Save the file and run `pub get` in your project directory to fetch and install t
 2. Import the package into your project:
 
 ```dart
-import 'package:simple_either/either.dart';
+import 'package:simple_either/simple_either.dart';
 ```
 
 ## Usage
@@ -32,7 +32,7 @@ import 'package:simple_either/either.dart';
 Explore the examples below to see how to use the "simple_either" package.
 
 ```dart
-import 'package:simple_either/either.dart';
+import 'package:simple_either/simple_either.dart';
 import 'dart:async';
 
 Either<Error, SuccessType> syncFunction() {
