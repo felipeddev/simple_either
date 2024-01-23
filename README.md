@@ -1,39 +1,62 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Simple Either
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Simple Either - a Dart library designed to facilitate functional programming through the
+implementation of the Either monad. This package provides a structured approach
+for handling two possible outcomes (typically success and failure) in a 
+functional paradigm.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Either Monad Implementation
+    - Left and Right classes for handling success and failure
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To start using the "simple_either" package, follow these steps:
+
+1. Add the dependency to your project's `pubspec.yaml` file:
+```yaml
+dependencies:
+  simple_either: ^1.0.0
+```
+Save the file and run `pub get` in your project directory to fetch and install the package.
+
+2. Import the package into your project:
+
+```dart
+import 'package:simple_either/either.dart';
+```
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Explore the examples below to see how to use the "simple_either" package.
 
 ```dart
-const like = 'sample';
+import 'package:simple_either/either.dart';
+import 'dart:async';
+
+Either<Error, SuccessType> syncFunction() {
+    try {
+        // Do something that might throw an error
+        return Right(SuccessType());
+    } catch (e) {
+        return Left(Error());
+    }
+}
+
+Future<Either<Error, SuccessType>> asyncFunction() async {
+    try {
+        // Do something that might throw an error
+        return Right(SuccessType());
+    } catch (e) {
+        return Left(Error());
+    }
+}
 ```
+
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+Check the [GitHub](https://github.com/felipeddev/either) repository for any additional information, issues, or 
+community 
+discussions.

@@ -1,4 +1,4 @@
-import 'package:either/either.dart';
+import 'package:simple_either/either.dart';
 
 void main() {
   final foo = Foo();

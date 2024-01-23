@@ -1,5 +1,5 @@
+import 'package:simple_either/either.dart';
 import 'package:test/test.dart';
-import 'package:either/either.dart';
 
 void main() {
   test('test Left Either', () {
@@ -18,8 +18,8 @@ void main() {
     final getRightValue = leftEither.getRightValue;
 
     final foldResult = leftEither.fold(
-          (l) => l,
-          (r) => 'NO OP',
+      (l) => l,
+      (r) => 'NO OP',
     );
 
     // assert
@@ -51,8 +51,8 @@ void main() {
     final getRightValue = rightEither.getRightValue;
 
     final foldResult = rightEither.fold(
-          (l) => 'NO OP',
-          (r) => r,
+      (l) => 'NO OP',
+      (r) => r,
     );
 
     // assert
